@@ -3,13 +3,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0101010;
+  --foreground: #010101;
   --primary: #C61AFF;
   --secondary: #1a1a1a;
-  --stock: #959595;
-  --font-geist-sans: 'Manrope', sans-serif;
-  --font-geist-mono: 'Manrope', monospace;
+  --stock: #9595954b;
+  --font-Manrope-sans: 'Manrope', sans-serif;
+  --font-Manrope-mono: 'Manrope', monospace;
+  
 }
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -17,8 +20,8 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-stock: var(--stock);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,7 +34,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(  --font-Manrope-sans);
 }
 
 p{
@@ -40,12 +43,12 @@ p{
 
 @layer utilities {
   .h2 {
-    @apply text-2xl md:text-3xl font-semibold inline-block md:mt-0 mb-6 uppercase bg-[linear-gradient(135deg,_theme('colors.primary'),_theme('colors.secondary'))] bg-clip-text text-transparent ;
+    @apply text-2xl md:text-3xl font-semibold inline-block md:mt-0 mb-6 ;
   }
   .h2White {
-    @apply text-2xl md:text-3xl font-semibold inline-block md:mt-0 mb-6 uppercase text-white bg-[linear-gradient(135deg,_theme('colors.primary'),_theme('colors.secondary'))] bg-clip-text text-transparent;
+    @apply text-2xl md:text-3xl font-bold inline-block md:mt-0 mb-6 ;
   }
   .h3{
-    @apply text-xl font-semibold
+    @apply text-2xl font-semibold
   }
 }

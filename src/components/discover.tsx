@@ -3,17 +3,17 @@ import React from 'react'
 const Discover = () => {
     return (
         <div>
-            <section className="max-w-[1300px] mx-auto px-4 py-12">
+            <section className="max-w-[1300px] mx-auto px-4 py-8 md:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-6">
                     {/* Box 1 */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-sm relative bg-center bg-cover"
+                    <div className="bg-white rounded-lg overflow-hidden flex items-center shadow-sm relative bg-center bg-cover"
                         style={{
                             backgroundImage: ` url('/assets/discover1.jpg')`,
                         }}
                     >
-                        <div className="absolute top-6 left-6 text-black">
+                        <div className=" p-6 text-black">
                             <h3 className=" h3 mb-1">Discover<br />VERA</h3>
-                            <p className="text-sm text-gray-700">Where Smart Buyers Meet Competitive Sellers</p>
+                            <p className="text-base text-gray-700">Where Smart Buyers Meet Competitive Sellers</p>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@ const Discover = () => {
                     >
                         <div className="p-6 text-black">
                             <h3 className="h3 mb-4">VERA Helps Your Business</h3>
-                            <ul className="space-y-2 text-sm">
+                            <ul className="space-y-2 text-base">
                                 <li className="flex items-center gap-2">
                                     ✅ Bulk Quote Requests
                                 </li>

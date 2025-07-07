@@ -27,7 +27,7 @@ const Usps = () => {
     ];
 
     return (
-        <div className="bg-[#fef6ff] py-20">
+        <div className="bg-[#fef6ff] py-8 md:py-16">
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {features.map((item, idx) => (
                     <div key={idx} className="flex gap-4 items-start ">

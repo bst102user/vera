@@ -1,5 +1,6 @@
 import React from "react";
-import { Star } from "lucide-react";
+import { Star, UserRoundCheck } from "lucide-react";
+import Image from "next/image";
 
 const products = [
   {
@@ -37,11 +38,11 @@ const products = [
 
 const BestCategorySection = () => {
   return (
-    <section className="max-w-[1300px] mx-auto px-4 py-12">
+    <section className="max-w-[1300px] mx-auto px-4 ">
       <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
         <h2 className="text-xl md:text-2xl font-semibold">Shop By Best Category</h2>
-        <ul className="flex gap-4 text-sm ">
-          {["Phone & Tablet", "Laptop & Computer", "TV, Video & Audio", "Other Accessories", "See all Product"].map(
+        <ul className="flex flex-col md:flex-row gap-4 text-sm ">
+          {["Phone & Tablet", "Laptop & Computer", "TV,flexVideo & Audio", "Other Accessories", "See all Product"].map(
             (tab, i) => (
               <li
                 key={i}
@@ -56,17 +57,17 @@ const BestCategorySection = () => {
         </ul>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
         {products.map((product, i) => (
-          <div key={i} className="flex gap-4 py-8 px-6 bg-white border border-gray-200">
-            <img src={product.image} alt={product.title} className="w-24 h-24 object-contain" />
+          <div key={i} className="grid grid-cols-[5fr_7fr] gap-4 py-8 px-6 bg-white ">
+            <Image src={product.image} alt={product.title} width={100} height={100} className="w-24 h-28 object-contain" />
             <div className="grid gap-2">
               <h3 className="text-sm font-medium leading-snug">{product.title}</h3>
               <div className="flex gap-2 mt-2 flex-wrap text-xs">
                 <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">🟣 Vira Verified</span>
-                <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">🧍‍♂️ 10 Vendor</span>
+                <div className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full flex gap-1 justify-between-around"><UserRoundCheck size={14} /> 10 Vendor</div>
               </div>
-              <div className="flex items-center text-sm text-gray-700 mt-2">
+              <div className="flex items-center text-sm text-gray-700 mt-2 ">
                 {[...Array(4)].map((_, i) => (
                   <Star key={i} size={14} fill="#facc15" stroke="transparent" />
                 ))}

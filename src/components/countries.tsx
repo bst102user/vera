@@ -7,7 +7,7 @@ const Countries = () => {
   ];
 
   return (
-    <section className="relative bg-gray py-20">
+    <section className="relative bg-gray py-8 md:py-16">
       {/* Background Map Image */}
       <div className="absolute inset-0  z-0 bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/assets/map.png')" }} // replace with actual image
@@ -22,7 +22,7 @@ const Countries = () => {
           {countries.map((country, index) => (
             <span
               key={index}
-              className="border border-gray-300 rounded-full px-4 py-1 text-sm hover:bg-gray-100 transition"
+              className="border border-gray-300 rounded-full px-4 py-1 text-sm hover:bg-primary/10 transition"
             >
               {country}
             </span>

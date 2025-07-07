@@ -6,25 +6,31 @@ const categories = [
         subtitle: "Stay Connected in Style",
         image: "/assets/phone.png",
         bg: "bg-[#eef1f4]",
-        colSpan: "col-span-2 row-span-2",
+        span: "row-span-2 col-span-2",
     },
     {
         title: "Laptops & Computers",
         subtitle: "Power Up Your Productivity",
         image: "/assets/laptop.png",
         bg: "bg-[#eef1f4]",
+        span: "col-start-3 col-span-2",
     },
     {
         title: "TV, Video & Audio",
         subtitle: "",
         image: "/assets/tv.png",
-        bg: "bg-white",
+        bg: "bg-[#eef1f4]",
+
+        span: "col-start-3 row-start-2",
+
     },
     {
         title: "Other Accessories",
         subtitle: "",
         image: "/assets/headphone.png",
-        bg: "bg-white",
+        bg: "bg-[#eef1f4]",
+        span: "col-start-4 row-start-2",
+
     },
     {
         title: "Home Decor",
@@ -32,30 +38,33 @@ const categories = [
         image: "/assets/chair.jpg",
         bg: "bg-[#84A8A9]",
         text: "text-white",
-        colSpan: "row-span-2",
+        span: "col-start-5 row-start-1 row-span-2",
     },
 ];
 
 export default function CategoryGrid() {
     return (
-        <section className="max-w-7xl m-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+
+        <section className="max-w-7xl m-auto grid grid-cols-5 grid-rows-2 gap-4 p-4 h-[500px]  py-8 md:py-16">
             {categories.map((cat, i) => (
                 <div
                     key={i}
-                    className={`p-4 rounded-lg flex flex-col justify-between ${cat.bg} ${cat.colSpan || ""
-                        }`}
+                    className={`p-4 rounded-lg flex flex-col justify-between overflow-hidden  ${cat.bg} ${cat.span || ""}`}
                 >
                     <div className={`mb-4 ${cat.text || "text-black"}`}>
-                        <h3 className="font-semibold text-lg">{cat.title}</h3>
-                        {cat.subtitle && <p className="text-sm">{cat.subtitle}</p>}
+                        <h3 className="text-2xl font-semibold">{cat.title}</h3>
+                        {cat.subtitle && <p className="text-lg">{cat.subtitle}</p>}
                     </div>
-                    <Image
-                        src={cat.image}
-                        alt={cat.title}
-                        width={300}
-                        height={200}
-                        className="object-contain mx-auto"
-                    />
+                    <div className="grid place-items-end h-full">
+
+                        <Image
+                            src={cat.image}
+                            alt={cat.title}
+                            width={300}
+                            height={200}
+                            className="object-contain "
+                        />
+                    </div>
                 </div>
             ))}
         </section>

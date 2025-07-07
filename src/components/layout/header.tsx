@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchBar from '../ui/searchBar'
 import { AlignJustify, ChevronDown, Tally1 } from 'lucide-react'
+import Image from 'next/image'
 
 const Header = () => {
   const navbar = [
@@ -12,13 +13,14 @@ const Header = () => {
   ]
 
 return (
-  <header className="border-b bg-white">
+  <header className=" hidden md:block  border-b bg-white">
     <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
       {/* Left Section: Logo */}
       <div className='flex items-center gap-4'>
 
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="w-auto h-9" />
+          <Image src="/logo.png" alt="Logo" width={1000} height={100}  className="w-auto h-9" />
+          {/* <img src="/logo.png" alt="Logo" className="w-auto h-9" /> */}
           {/* <span className="text-xl font-bold text-[#C61AFF]">VERA</span> */}
         </div>
 

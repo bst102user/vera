@@ -20,13 +20,13 @@ export default function Home() {
    <Why/>
    <CategoryGrid />
    <ThreeStepSection />
-   {/* <TrendingSlider /> */}
+   <TrendingSlider />
+  
    <Discover />
    <BestCategorySection />
    <GrowthSection />
    <Countries />
-   {/* <Testimonial /> */}
-   <Footer />
+   <Testimonial />
 </>
   );  
 }

@@ -27,14 +27,14 @@ const Banner = ({ bgImage }: { bgImage: string }) => {
             <div className='max-w-7xl min-h-[60vh] mx-auto py-4 flex flex-col items-center justify-center text-center'>
                 <h1 className='text-4xl text-white font-bold mb-8'>One product. Multiple prices.</h1>
                 <SearchBarMain />
-                <ul className='mt-8 w-full flex items-center justify-center gap-2'>
+                <ul className='mt-8 w-full flex items-center flex-col md:flex-row justify-center gap-2'>
                     {usps.map((usp, index) => (
-                        <li key={index} className='text-xs text-white my-2 px-2 py-1 rounded-xl bg-[#95959528]'>
+                        <li key={index} className='text-sm text-white my-2 px-2 py-1 rounded-xl bg-[#95959528]'>
                             {usp.title}
                         </li>
                     ))}
                 </ul>
-                <p className='text-xs text-white mt-4'>Get real-time quotes from trusted vendors and pick your perfect price.</p>
+                <p className='text-sm text-white mt-4'>Get real-time quotes from trusted vendors and pick your perfect price.</p>
             </div>
                     </div>
 

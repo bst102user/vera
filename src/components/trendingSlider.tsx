@@ -2,18 +2,20 @@
 
 import React from "react";
 import Slider, { Settings } from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const trendingItems = [
-  { title: "Home & Decor", img: "/images/chair.png" },
-  { title: "Autopart", img: "/images/tyres.png" },
-  { title: "Laptop & Computer", img: "/images/laptop.png" },
-  { title: "Headphones", img: "/images/headphones.png" },
-  { title: "HandBags", img: "/images/bag.png" },
-  { title: "Smartphone", img: "/images/phone.png" },
-  { title: "Home & Decor", img: "/images/chair.png" },
-  { title: "Autopart", img: "/images/tyres.png" },
+  { title: "Home & Decor", img: "/assets/images/chair.png" },
+  { title: "iphone", img: "/assets/iphone.jpg" },
+  { title: "Laptop & Computer", img: "/assets/laptop.png" },
+  { title: "Headphones", img: "/assets/headphones.png" },
+  { title: "HandBags", img: "/assets/bag.png" },
+  { title: "Smartphone", img: "/assets/phone.png" },
+  { title: "Home & Decor", img: "/assets/chair.png" },
+  { title: "Autopart", img: "/public/images/tyres.png" },
 ];
 
 const TrendingSlider: React.FC = () => {
@@ -21,7 +23,7 @@ const TrendingSlider: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,

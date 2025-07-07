@@ -2,8 +2,10 @@
 
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 const testimonials = [
     {
@@ -12,9 +14,41 @@ const testimonials = [
         star: 5,
         image: "/images/maria.jpg",
         description: "I love that I don’t have to wonder if I’m overpaying. VERA brings the vendors to me, and I choose the price that works for my budget.",
-    
+
     },
-    
+    {
+        name: "SSG Maria T.",
+        designation: "Buyer",
+        star: 5,
+        image: "/images/maria.jpg",
+        description: "I love that I don’t have to wonder if I’m overpaying. VERA brings the vendors to me, and I choose the price that works for my budget.",
+
+    },
+    {
+        name: "SSG Maria T.",
+        designation: "Buyer",
+        star: 5,
+        image: "/images/maria.jpg",
+        description: "I love that I don’t have to wonder if I’m overpaying. VERA brings the vendors to me, and I choose the price that works for my budget.",
+
+    },
+    {
+        name: "SSG Maria T.",
+        designation: "Buyer",
+        star: 5,
+        image: "/images/maria.jpg",
+        description: "I love that I don’t have to wonder if I’m overpaying. VERA brings the vendors to me, and I choose the price that works for my budget.",
+
+    },
+    {
+        name: "SSG Maria T.",
+        designation: "Buyer",
+        star: 5,
+        image: "/images/maria.jpg",
+        description: "I love that I don’t have to wonder if I’m overpaying. VERA brings the vendors to me, and I choose the price that works for my budget.",
+
+    },
+
 ];
 
 const Testimonial: React.FC = () => {
@@ -53,22 +87,35 @@ const Testimonial: React.FC = () => {
 
                 </div>
                 <Slider {...settings}>
-                    {testimonials?.map((t:any, idx:any) => (
-                        <div key={idx} className="px-6">
-                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-left min-h-[240px] ">
-                                <div className="flex mb-6 gap-1 text-yellow-500 text-lg">
-                                    {Array(t?.star)
-                                        .fill(0)
-                                        .map((_, i) => (
-                                            <Star key={i} />
-                                        ))}
-                                </div>
-                                <p className="text-sm text-gray-800 mb-4 md:leading-8">{t.description}</p>
-                                <div className="flex items-center mt-auto">
+                    {testimonials?.map((t: any, idx: any) => (
+                        <div key={idx} className="px-2">
+                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-left min-h-[240px] flex flex-col content-between">
+
+                                <div className="flex flex-col  mt-auto">
+                                    <Quote fill="black" />
+                                    <p className="text-sm text-gray-800 my-2 md:leading-8">{t.description}</p>
+                                    <div className="flex justify-end">
+
+                                    <Quote fill="black" />
+                                    </div>
 
                                     {/* <Image src={t.image} alt={t.name} width={300} height={60} className="w-12 h-12 rounded-full object-cover mr-3" /> */}
 
                                     <p className="font-semibold">{t.title}</p>
+                                </div>
+                                <div className=" flex justify-between border-t border-stock pt-4 mt-4">
+                                    <div>
+                                        <p className="text-black font-semibold">{t?.name}</p>
+                                        <p className="text-sm">{t?.designation}</p>
+                                    </div>
+                                    <div className="flex mb-6 gap-1 text-yellow-500 text-lg">
+
+                                        {Array(t?.star)
+                                            .fill(0)
+                                            .map((_, i) => (
+                                                <Star key={i}  className="text-[color:var(--yellow)]"/>
+                                            ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
