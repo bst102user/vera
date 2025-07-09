@@ -22,7 +22,7 @@ const Countries = () => {
           {countries.map((country, index) => (
             <span
               key={index}
-              className="border border-gray-300 rounded-full px-4 py-1 text-sm hover:bg-primary/10 transition"
+              className="border border-gray-300 rounded-full px-2 md:px-4 py-1 text-sm hover:bg-primary/10 transition"
             >
               {country}
             </span>

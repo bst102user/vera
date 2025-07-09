@@ -25,7 +25,7 @@ const HeaderMobile = () => {
           <Image src="/logo.png" alt="Logo" width={1000} height={100}  className="w-auto h-9" />
           <div className="flex items-center gap-2">
 
-            <Search size={24} onClick={() => setIsSearch(!isSearch)} />
+            <Search size={20} onClick={() => setIsSearch(!isSearch)} />
 
 
             {isToggle ? (

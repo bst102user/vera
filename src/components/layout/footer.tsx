@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-[#C61AFF] text-xl font-bold">
             {/* Replace with actual logo */}
-            <Image src="/logo.png" alt="VERA Logo" width={120} height={40} />
+            <Image src="/logoFooter.png" alt="VERA Logo" width={90} height={40} />
           </div>
           <div className="text-gray-400 space-y-1">
             <p>45 Innovation Street,<br />Berlin Tech Park,<br />10115 Berlin, Germany</p>
@@ -28,7 +28,6 @@ const Footer = () => {
             <li>Size Guide</li>
           </ul>
         </div>
-
         {/* INFORMATION */}
         <div>
           <h3 className="font-semibold mb-3">INFORMATION</h3>
